@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+</head>
+<body>
+	<h1>REGISTRAR CLIENTES</h1>
+    <form th:action="@{/registrar}" th:object="${cliente}" method="post">
+        <label>ID: <input type="text" th:name="id" /></label>
+        <br>
+        <br>
+        <label>Codigo Postal: <input type="text" th:name="codigoPostal" /></label>
+        <br>
+        <br>
+        <label>Primer Nombre: <input type="text" th:name="primerNombre" /></label>
+        <br>
+        <br>
+        <label>Segundo Nombre: <input type="text" th:name="segundoNombre" /></label>
+        <br>
+        <br>
+        <label>Apellido Paterno: <input type="text" th:name="apellidoPat" /></label>
+        <br>
+        <br>
+        <label>Apellido Materno: <input type="text" th:name="apellidoMat" /></label>
+        <br>
+        <br>
+        <label>Ciudad: <input type="text" th:name="ciudad" /></label>
+        <br>
+        <br>
+        <label>Estado Civil: <input type="text" th:name="estadoCivil" /></label>
+        <br>
+        <br>
+        <label>Sueldo: <input type="text" th:name="sueldo" /></label>
+        <br>
+        <br>
+        <button type="submit">Registrar Cliente</button>
+    </form>
+
+</body>
+</html>

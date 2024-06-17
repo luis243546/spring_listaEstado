@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Lista por Estado Civil</title>
+</head>
+<body>
+	<h1>Lista de Clientes Casados</h1>
+	<table border="3" style="border-radius: 5px; background-color: rgb(192, 192, 192);">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>CODIGO POSTAL</th>
+				<th>PRIMER NOMBRE</th>
+				<th>SEGUNDO NOMBRE</th>
+				<th>APELLIDO PATERNO</th>
+				<th>APELLIDO MATERNO</th>
+				<th>CIUDAD</th>
+				<th>ESTADO CIVIL</th>
+				<th>SUELDO</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="objCLI: ${ListaE}">
+			<td th:text="${objCLI.id}"></td>
+			<td th:text="${objCLI.codigoPostal}"></td>
+			<td th:text="${objCLI.primerNombre}"></td>
+			<td th:text="${objCLI.segundoNombre}"></td>
+			<td th:text="${objCLI.apellidoPat}"></td>
+			<td th:text="${objCLI.apellidoMat}"></td>
+			<td th:text="${objCLI.ciudad}"></td>
+			<td th:text="${objCLI.estadoCivil}"></td>
+			<td th:text="${objCLI.sueldo}"></td>
+		</tbody>
+	</table>
+</body>
+</html>
